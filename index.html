@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AstraNova Space Colony Resident Application">
+
+    <title>AstraNova | Space Colony Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="stars stars-one"></div>
+    <div class="stars stars-two"></div>
+    <div class="stars stars-three"></div>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+
+            <div>
+                <h1>ASTRANOVA</h1>
+                <span>INTERPLANETARY COLONY AUTHORITY</span>
+            </div>
+        </div>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="mission-tag">
+                    <span>MISSION</span>
+                    <strong>2087</strong>
+                </div>
+
+                <h2>
+                    Apply for Humanity's
+                    <span>Next Home</span>
+                </h2>
+
+                <p>
+                    Submit your application to join the AstraNova
+                    Space Colony. Your skills could help build
+                    humanity's future beyond Earth.
+                </p>
+
+            </div>
+
+            <div class="planet">
+                <div class="planet-ring"></div>
+                <div class="planet-surface"></div>
+            </div>
+
+        </section>
+
+
+        <section class="dashboard">
+
+            <div class="dashboard-card">
+                <span class="dashboard-label">MISSION STATUS</span>
+
+                <div class="progress-wrapper">
+                    <div class="progress-bar">
+                        <div id="progressBar"></div>
+                    </div>
+
+                    <strong id="progressText">0%</strong>
+                </div>
+
+                <small>Application completion</small>
+            </div>
+
+
+            <div class="dashboard-card">
+                <span class="dashboard-label">COLONY COMPATIBILITY</span>
+
+                <div class="score">
+                    <strong id="compatibilityScore">0</strong>
+                    <span>/100</span>
+                </div>
+
+                <small id="scoreMessage">
+                    Complete your profile
+                </small>
+            </div>
+
+
+            <div class="dashboard-card">
+                <span class="dashboard-label">APPLICATION CLASS</span>
+
+                <strong id="applicationClass">
+                    PENDING
+                </strong>
+
+                <small>Awaiting candidate data</small>
+            </div>
+
+        </section>
+
+
+        <form id="colonyForm" novalidate>
+
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>Personal Identity</h3>
+                        <p>Tell us who you are.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                  
+                    <div class="form-group full">
+
+                        <label for="fullName">
+                            Full Name
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="e.g. Alex Morgan"
+                            minlength="3"
+                            maxlength="60"
+                            autocomplete="name"
+                            required
+                            aria-describedby="fullNameError">
+
+                        <div
+                            class="field-error"
+                            id="fullNameError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="age">
+                            Age
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            placeholder="18 - 65"
+                            min="18"
+                            max="65"
+                            required
+                            aria-describedby="ageError">
+
+                        <div
+                            class="field-error"
+                            id="ageError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                  
+                    <div class="form-group">
+
+                        <label for="nationality">
+                            Nationality
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="nationality"
+                            name="nationality"
+                            required
+                            aria-describedby="nationalityError">
+
+                            <option value="">
+                                Select nationality
+                            </option>
+
+                            <option>Pakistani</option>
+                            <option>Indian</option>
+                            <option>Bangladeshi</option>
+                            <option>British</option>
+                            <option>American</option>
+                            <option>Canadian</option>
+                            <option>Australian</option>
+                            <option>Japanese</option>
+                            <option>Other</option>
+
+                        </select>
+
+                        <div
+                            class="field-error"
+                            id="nationalityError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="candidate@example.com"
+                            autocomplete="email"
+                            required
+                            aria-describedby="emailError">
+
+                        <div
+                            class="field-error"
+                            id="emailError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                   
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Contact Number
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+92 300 1234567"
+                            autocomplete="tel"
+                            required
+                            aria-describedby="phoneError">
+
+                        <div
+                            class="field-error"
+                            id="phoneError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+           
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>Mission Profile</h3>
+                        <p>Define your role within the colony.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                 
+                    <div class="form-group">
+
+                        <label for="profession">
+                            Profession
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="profession"
+                            name="profession"
+                            placeholder="e.g. Software Engineer"
+                            minlength="2"
+                            maxlength="50"
+                            required
+                            aria-describedby="professionError">
+
+                        <div
+                            class="field-error"
+                            id="professionError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                   
+                    <div class="form-group">
+
+                        <label for="department">
+                            Colony Department
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="department"
+                            name="department"
+                            required
+                            aria-describedby="departmentError">
+
+                            <option value="">
+                                Select department
+                            </option>
+
+                            <option value="engineering">
+                                Engineering
+                            </option>
+
+                            <option value="medical">
+                                Medical & Health
+                            </option>
+
+                            <option value="research">
+                                Research & Science
+                            </option>
+
+                            <option value="agriculture">
+                                Agriculture
+                            </option>
+
+                            <option value="technology">
+                                Technology
+                            </option>
+
+                            <option value="operations">
+                                Colony Operations
+                            </option>
+
+                        </select>
+
+                        <div
+                            class="field-error"
+                            id="departmentError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+               
+                    <div class="form-group">
+
+                        <label for="missionRole">
+                            Mission Role
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="missionRole"
+                            name="missionRole"
+                            required
+                            disabled
+                            aria-describedby="missionRoleError">
+
+                            <option value="">
+                                Select department first
+                            </option>
+
+                        </select>
+
+                        <div
+                            class="field-error"
+                            id="missionRoleError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                   
+                    <div class="form-group">
+
+                        <label for="experience">
+                            Experience Level
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="experience"
+                            name="experience"
+                            required
+                            aria-describedby="experienceError">
+
+                            <option value="">
+                                Select experience
+                            </option>
+
+                            <option value="beginner">
+                                Beginner
+                            </option>
+
+                            <option value="intermediate">
+                                Intermediate
+                            </option>
+
+                            <option value="advanced">
+                                Advanced
+                            </option>
+
+                            <option value="expert">
+                                Expert
+                            </option>
+
+                        </select>
+
+                        <div
+                            class="field-error"
+                            id="experienceError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                 
+                    <div class="form-group">
+
+                        <label for="duration">
+                            Mission Duration
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="duration"
+                            name="duration"
+                            required
+                            aria-describedby="durationError">
+
+                            <option value="">
+                                Select duration
+                            </option>
+
+                            <option value="1">
+                                1 Year
+                            </option>
+
+                            <option value="2">
+                                2 Years
+                            </option>
+
+                            <option value="5">
+                                5 Years
+                            </option>
+
+                            <option value="10">
+                                10+ Years
+                            </option>
+
+                        </select>
+
+                        <div
+                            class="field-error"
+                            id="durationError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+          
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>Skills & Survival Profile</h3>
+                        <p>What can you contribute to the colony?</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+               
+                    <div class="form-group full">
+
+                        <label for="skills">
+                            Technical / Professional Skills
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="skills"
+                            name="skills"
+                            placeholder="e.g. JavaScript, Robotics, Biology"
+                            minlength="5"
+                            maxlength="120"
+                            required
+                            aria-describedby="skillsError">
+
+                        <div
+                            class="field-error"
+                            id="skillsError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                 
+                    <div class="form-group full">
+
+                        <label for="spaceExperience">
+                            Previous Research / Space Experience
+                        </label>
+
+                        <textarea
+                            id="spaceExperience"
+                            name="spaceExperience"
+                            rows="5"
+                            maxlength="500"
+                            placeholder="Describe relevant experience..."
+                            aria-describedby="experienceCounter"></textarea>
+
+                        <div class="textarea-footer">
+                            <span id="experienceCounter">
+                                0 / 500
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                  
+                    <div class="form-group full">
+
+                        <label for="reason">
+                            Why should AstraNova select you?
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="reason"
+                            name="reason"
+                            rows="6"
+                            minlength="50"
+                            maxlength="500"
+                            placeholder="Tell us about your contribution to humanity's future..."
+                            required
+                            aria-describedby="reasonCounter reasonError"></textarea>
+
+                        <div class="textarea-footer">
+
+                            <span id="reasonCounter">
+                                0 / 500
+                            </span>
+
+                        </div>
+
+                        <div
+                            class="field-error"
+                            id="reasonError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+          
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        04
+                    </div>
+
+                    <div>
+                        <h3>Colony Preferences</h3>
+                        <p>Choose your future home.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                  
+                    <div class="form-group">
+
+                        <label for="zone">
+                            Preferred Colony Zone
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="zone"
+                            name="zone"
+                            required
+                            aria-describedby="zoneError">
+
+                            <option value="">
+                                Select zone
+                            </option>
+
+                            <option value="central">
+                                Central Habitat
+                            </option>
+
+                            <option value="research">
+                                Research Sector
+                            </option>
+
+                            <option value="agri">
+                                Bio-Agriculture Sector
+                            </option>
+
+                            <option value="engineering">
+                                Engineering Sector
+                            </option>
+
+                        </select>
+
+                        <div
+                            class="field-error"
+                            id="zoneError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                
+                    <div class="form-group">
+
+                        <label for="accommodation">
+                            Accommodation
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="accommodation"
+                            name="accommodation"
+                            required
+                            aria-describedby="accommodationError">
+
+                            <option value="">
+                                Select accommodation
+                            </option>
+
+                            <option value="private">
+                                Private Pod
+                            </option>
+
+                            <option value="shared">
+                                Shared Habitat
+                            </option>
+
+                            <option value="family">
+                                Family Habitat
+                            </option>
+
+                        </select>
+
+                        <div
+                            class="field-error"
+                            id="accommodationError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="food">
+                            Food Preference
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="food"
+                            name="food"
+                            required
+                            aria-describedby="foodError">
+
+                            <option value="">
+                                Select preference
+                            </option>
+
+                            <option value="standard">
+                                Standard Colony Diet
+                            </option>
+
+                            <option value="vegetarian">
+                                Vegetarian
+                            </option>
+
+                            <option value="vegan">
+                                Plant-Based
+                            </option>
+
+                            <option value="custom">
+                                Special Dietary Plan
+                            </option>
+
+                        </select>
+
+                        <div
+                            class="field-error"
+                            id="foodError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+          
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        05
+                    </div>
+
+                    <div>
+                        <h3>Emergency Information</h3>
+                        <p>Required for mission safety.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="emergencyName">
+                            Emergency Contact
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="emergencyName"
+                            name="emergencyName"
+                            placeholder="Full name"
+                            minlength="3"
+                            maxlength="60"
+                            required
+                            aria-describedby="emergencyNameError">
+
+                        <div
+                            class="field-error"
+                            id="emergencyNameError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                   
+                    <div class="form-group">
+
+                        <label for="relationship">
+                            Relationship
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="relationship"
+                            name="relationship"
+                            required
+                            aria-describedby="relationshipError">
+
+                            <option value="">
+                                Select relationship
+                            </option>
+
+                            <option>Parent</option>
+                            <option>Sibling</option>
+                            <option>Guardian</option>
+                            <option>Spouse</option>
+                            <option>Friend</option>
+                            <option>Other</option>
+
+                        </select>
+
+                        <div
+                            class="field-error"
+                            id="relationshipError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="form-group full">
+
+                        <label for="emergencyPhone">
+                            Emergency Contact Number
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="emergencyPhone"
+                            name="emergencyPhone"
+                            placeholder="+92 300 1234567"
+                            required
+                            aria-describedby="emergencyPhoneError">
+
+                        <div
+                            class="field-error"
+                            id="emergencyPhoneError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        06
+                    </div>
+
+                    <div>
+                        <h3>Security Clearance</h3>
+                        <p>Secure your colony application.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                  
+                    <div class="form-group">
+
+                        <label for="password">
+                            Access Password
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a strong password"
+                            minlength="8"
+                            maxlength="40"
+                            autocomplete="new-password"
+                            required
+                            aria-describedby="passwordHelp passwordError">
+
+                        <div class="password-meter">
+
+                            <div class="password-track">
+                                <div id="passwordStrength"></div>
+                            </div>
+
+                            <span id="passwordLabel">
+                                No password
+                            </span>
+
+                        </div>
+
+                        <small id="passwordHelp">
+                            8+ characters with uppercase,
+                            lowercase, number and special character.
+                        </small>
+
+                        <div
+                            class="field-error"
+                            id="passwordError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                  
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Re-enter password"
+                            autocomplete="new-password"
+                            required
+                            aria-describedby="confirmPasswordError">
+
+                        <div
+                            class="field-error"
+                            id="confirmPasswordError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+
+                  
+                    <div class="agreement full">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="agreement"
+                                name="agreement"
+                                required
+                                aria-describedby="agreementError">
+
+                            <span class="custom-checkbox"></span>
+
+                            <span>
+                                I confirm that the information provided
+                                is accurate and I agree to the
+                                AstraNova mission application terms.
+                            </span>
+
+                        </label>
+
+                        <div
+                            class="field-error"
+                            id="agreementError"
+                            role="alert">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+          
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    id="resetBtn"
+                    class="btn secondary">
+                    CLEAR APPLICATION
+                </button>
+
+                <button
+                    type="button"
+                    id="reviewBtn"
+                    class="btn primary">
+                    REVIEW APPLICATION
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </form>
+
+
+       
+        <div
+            class="modal-overlay"
+            id="reviewModal"
+            aria-hidden="true">
+
+            <div
+                class="review-modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="reviewTitle">
+
+                <button
+                    type="button"
+                    class="close-btn"
+                    id="closeReview"
+                    aria-label="Close review">
+                    ×
+                </button>
+
+                <div class="review-header">
+
+                    <span class="mission-tag">
+                        FINAL CHECK
+                    </span>
+
+                    <h2 id="reviewTitle">
+                        Review Your Mission Application
+                    </h2>
+
+                    <p>
+                        Verify your information before transmission.
+                    </p>
+
+                </div>
+
+                <div id="reviewContent" class="review-content">
+                </div>
+
+                <div class="review-actions">
+
+                    <button
+                        type="button"
+                        class="btn secondary"
+                        id="editBtn">
+                        ← EDIT APPLICATION
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn primary"
+                        id="submitBtn">
+                        TRANSMIT APPLICATION
+                        <span>✦</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+     
+        <section
+            class="success-screen"
+            id="successScreen"
+            aria-live="polite"
+            hidden>
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <span class="success-tag">
+                TRANSMISSION COMPLETE
+            </span>
+
+            <h2>
+                APPLICATION
+                <span>ACCEPTED</span>
+            </h2>
+
+            <p>
+                Your AstraNova Space Colony application has been
+                successfully transmitted for evaluation.
+            </p>
+
+            <div class="application-id">
+                <small>APPLICATION ID</small>
+                <strong id="applicationId">
+                    ASTRA-000000
+                </strong>
+            </div>
+
+            <div class="success-details">
+
+                <div>
+                    <span>STATUS</span>
+                    <strong>UNDER REVIEW</strong>
+                </div>
+
+                <div>
+                    <span>CLASS</span>
+                    <strong id="successClass">
+                        CANDIDATE
+                    </strong>
+                </div>
+
+                <div>
+                    <span>SCORE</span>
+                    <strong id="successScore">
+                        0/100
+                    </strong>
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="btn primary"
+                id="newApplicationBtn">
+                START NEW APPLICATION
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2087 ASTRANOVA INTERPLANETARY COLONY AUTHORITY
+        </p>
+
+        <span>
+            SECURE APPLICATION SYSTEM
+        </span>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
